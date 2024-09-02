@@ -1,0 +1,11 @@
+#!/bin/bash
+yum install httpd -y
+yum install git -y
+service httpd start
+#chkconfig httpd on
+cd /var/www/html
+pwd
+git clone https://github.com/sreesysadm/carwebsite.git
+chkconfig httpd on
+serviice httpd restart
+ls -lrt
